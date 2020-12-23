@@ -1,8 +1,8 @@
-<app-header></app-header>
+<app-header  (searching)="searchThis($event)" ></app-header>
 
 <app-jumbotron-bien></app-jumbotron-bien>
 <div class="container">
-  <app-list-bien></app-list-bien>
+  <app-list-bien [searchs]="baba"  ></app-list-bien>
 
 </div>
  <!--<button (click)="clickBtn()" >{{ok?"Activer" : "Desactiver"}} le champ</button>

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Bien} from '../../bien.model';
+import {UtilService} from '../../util.service';
 
 @Component({
   selector: 'app-item-bien',
@@ -8,13 +9,8 @@ import {Bien} from '../../bien.model';
 })
 export class ItemBienComponent implements OnInit {
   @Input() bien: Bien;
-
-  constructor() { }
+  constructor(private utilService: UtilService) { }
   ngOnInit(): void {
-  }
-  getJour(difference: any){
-    return Math.ceil(difference / (1000 * 3600 * 24));
-
   }
 
 }

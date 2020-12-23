@@ -1,11 +1,11 @@
-<div  class="card" style="width: 18rem;">
+<div   class="card" style="width: 18rem;">
   <img class="card-img-top" src="{{bien.image}}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">{{bien.title}}</h5>
-    <p class="card-text">{{bien.description}}</p>
+    <h5 class="card-title">{{bien.title | uppercase}}</h5>
+    <p class="card-text">{{bien.description | summarize: 20}}</p>
    <hr>
-    <span class="float-left btn btn-sm btn btn-outline-danger disabled">{{bien.price}}F.CFA</span>
-    <span class="btn btn-sm tex-center disabled">Il y a {{getJour(bien.createdAt.getTime())}} j</span>
+    <span class="float-left btn btn-sm btn btn-outline-danger disabled">{{bien.price| separator:'.'}}F.CFA</span>
+    <span class="btn btn-sm tex-center disabled">Il y a {{bien.createdAt | timeLeft}} </span>
     <a href="#" class="btn btn-sm btn-primary float-right">Reserver</a>
   </div>
 </div>
